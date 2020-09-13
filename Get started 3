@@ -1,0 +1,3 @@
+stripe config --set color on
+stripe config --unset color
+stripe config --list

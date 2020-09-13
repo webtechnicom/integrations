@@ -1,0 +1,3 @@
+stripe open dashboard/webhooks
+stripe open dashboard/apikeys --live
+stripe open --live --list

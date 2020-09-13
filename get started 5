@@ -1,0 +1,6 @@
+stripe logs tail
+stripe logs tail \
+    --filter-http-method POST \
+    --filter-status-code-type 4XX
+    stripe logs tail --filter-http-method GET,POST
+    stripe status

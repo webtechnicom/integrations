@@ -1,0 +1,3 @@
+stripe login
+stripe login --project-name=rocket-rides
+stripe login --interactive

@@ -1,0 +1,21 @@
+composer require stripe/stripe-php
+$stripe = new \Stripe\StripeClient("sk_test_uaxz8O6EqdRdgSy5uC5FcRFb");
+$ch = $stripe->charges->capture(
+  'ch_1HPcNZFCL1ycm3Rc3bqlrwwV',
+  [],
+  ['api_key' => 'pk_live_51AXJ0vFCL1ycm3RcEzn0xodUBXt9InPZHaW6ZqrHGiXPUPsmWGT9U27OtFMn7gxFtaemBMBfXUmKnsoWUETNefs100MaPY8r0N]
+);
+$ch = $stripe->charges->capture(
+  'ch_1HPcNZFCL1ycm3Rc3bqlrwwV',
+  [],
+  ['stripe_account' => 'acct_1AXJ0vFCL1ycm3Rc']
+);
+/ Set your secret key. Remember to switch to your live secret key in production!
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+\Stripe\Stripe::setApiKey('pk_live_51AXJ0vFCL1ycm3RcEzn0xodUBXt9InPZHaW6ZqrHGiXPUPsmWGT9U27OtFMn7gxFtaemBMBfXUmKnsoWUETNefs100MaPY8r0N');
+
+$account = \Stripe\Account::create([
+  'country' => 'US',
+  'type' => 'express',
+  'requested_capabilities' => ['card_payments', 'transfers'],
+]);

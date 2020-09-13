@@ -1,0 +1,2 @@
+stripe samples create adding-sales-tax
+stripe samples create adding-sales-tax ./sales-tax-sample

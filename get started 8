@@ -1,0 +1,2 @@
+stripe trigger invoice.payment_succeeded
+stripe trigger --help

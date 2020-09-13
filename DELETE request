@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "template_version": 0
+  },
+  "fixtures": [
+    {
+      "name": "cust_bender",
+      "path": "/v1/customers",
+      "method": "post",
+      "params": {
+        "name": "Bender Bending Rodriguez",
+        "email": "bender@planex.com",
+        "source": "tok_visa",
+        "address": {
+          "line1": "1 Planet Express St",
+          "city": "New New York"
+        }
+      }
+    },
+    {
+      "name": "char_bender",
+      "path": "/v1/charges",
+      "method": "post",
+      "params": {
+        "customer": "${cust_bender:id}",
+        "amount": 100,
+        "currency": "usd",
+        "capture": false
+      }
+    },
+    {
+      "name": "capt_bender",
+      "path": "/v1/charges/${char_bender:id}/capture",
+      "method": "post"
+    }
+  ]
+}

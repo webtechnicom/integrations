@@ -1,0 +1,3 @@
+stripe logout
+stripe logout --project-name=rocket-rides
+stripe logout --all

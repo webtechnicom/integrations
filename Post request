@@ -1,0 +1,6 @@
+stripe delete /v1/customers/cus_I0NDTFXEN4dY7P
+{
+  "id": "cus_I0NDTFXEN4dY7P",
+  "object": "customer",
+  "deleted": true
+}
